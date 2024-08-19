@@ -1,5 +1,7 @@
 # flutter_application_1
 
+[いちから始めるFlutterモバイルアプリ開発](https://zenn.dev/heyhey1028/books/flutter-basics)を見ながら動かしてみた．
+
 A new Flutter project.
 
 ## Getting Started
