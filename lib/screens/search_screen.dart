@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/widgets/article_container.dart';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_application_1/models/article.dart';
+import 'package:flutter_application_1/models/user.dart';
 
 class SearchScreen extends StatefulWidget {
   const SearchScreen({super.key});
@@ -38,6 +40,13 @@ class _SearchScreenState extends State<SearchScreen> {
                 final results = await searchQiita(value);
                 setState(() => articles = results);
               },
+            ),
+          ),
+          Expanded(
+            child: ListView(
+              children: articles
+                  .map((articles) => ArticleContainer(article: articles))
+                  .toList(),
             ),
           )
         ],
